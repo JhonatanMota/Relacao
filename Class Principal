@@ -1,0 +1,21 @@
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+public class Math_Discrete_Relacao {
+    public static void main(String[] args) {
+        Relacao r= new Relacao();
+        r.setA(1);
+        r.setA(2);
+        r.setA(3);
+        
+        r.setB(2);
+        r.setB(3);
+        r.setB(4);
+        
+        //r.produtoCartesiano();
+        
+        r.EndorelacaoAmaior();
+        
+    }
+}
