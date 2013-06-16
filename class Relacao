@@ -1,0 +1,158 @@
+
+import java.util.ArrayList;
+
+public class Relacao {
+    private ArrayList<Integer> A= new ArrayList<Integer>();
+    private ArrayList<Integer> B= new ArrayList<Integer>();
+    private ArrayList<String> C= new ArrayList<String>();
+    public  ArrayList<Integer> getA() {
+        return A;
+    }
+
+    public void setA(int valor) {
+        A.add(valor);
+    }
+
+    public ArrayList<Integer> getB() {
+        return B;
+    }
+
+    public void setB(int valor) {
+        B.add(valor);
+    }
+    
+    public void produtoCartesiano(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<B.size();j++){
+                C.add("<"+A.get(i)+","+B.get(j)+">");
+            }
+        }
+        System.out.println(C);
+    }
+    
+    public void EndorelacaoA(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                C.add("<"+A.get(i)+","+A.get(j)+">");
+            }
+        }
+        System.out.println(C);
+    }
+    
+    public void EndorelacaoB(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                C.add("<"+B.get(i)+","+B.get(j)+">");
+            }
+        }
+        System.out.println(C);
+    }
+     public void EndorelacaoAmenor(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                if(A.get(i)<A.get(j)){
+                    C.add("<"+A.get(i)+","+A.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+        System.out.println("Transitiva \t Irreflexiva");
+    }
+     public void EndorelacaoAmenorIgual(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                if(A.get(i)<=A.get(j)){
+                    C.add("<"+A.get(i)+","+A.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+        System.out.println("Transitiva");
+    }
+     public void EndorelacaoAmaior(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                if(A.get(i)>A.get(j)){
+                    C.add("<"+A.get(i)+","+A.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+        System.out.println("Transitiva \t Irreflexiva");
+    }
+     public void EndorelacaoAmaiorIgual(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                if(A.get(i)>=A.get(j)){
+                    C.add("<"+A.get(i)+","+A.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+        System.out.println("Transitiva");
+    }
+     public void EndorelacaoAigual(){
+        for(int i=0;i<A.size();i++){
+            for(int j=0;j<A.size();j++){
+                if(A.get(i)==A.get(j)){
+                    C.add("<"+A.get(i)+","+A.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+        System.out.println("Reflexiva"+"\t Simétrica");
+    }
+     
+     
+     public void EndorelacaoBmenor(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                if(B.get(i)<B.get(j)){
+                    C.add("<"+B.get(i)+","+B.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+    }
+     public void EndorelacaoBmenorIgual(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                if(B.get(i)<=B.get(j)){
+                    C.add("<"+B.get(i)+","+B.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+    }
+     public void EndorelacaoBmaior(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                if(B.get(i)>B.get(j)){
+                    C.add("<"+B.get(i)+","+B.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+    }
+     public void EndorelacaoBmaiorIgual(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                if(B.get(i)>=B.get(j)){
+                    C.add("<"+B.get(i)+","+B.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+    }
+     public void EndorelacaoBigual(){
+        for(int i=0;i<B.size();i++){
+            for(int j=0;j<B.size();j++){
+                if(B.get(i)==B.get(j)){
+                    C.add("<"+B.get(i)+","+B.get(j)+">");
+                }
+            }
+        }
+        System.out.println(C);
+    }
+     
+}
